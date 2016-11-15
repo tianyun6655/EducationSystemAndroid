@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <RelativeLayout
+        android:layout_height="?actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="请输入班级代号"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/edt_token"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/round_background_grey"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#cccccc"
+        android:textSize="15sp"
+        android:hint="班级代号"
+        android:paddingLeft="15dp"
+        android:textColorHint="#bdbdbd"
+        android:layout_marginLeft="20dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        />
+    <Button
+        android:id="@+id/btn_dilog_comfire"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+
+        android:text="确认"
+        />
+
+</RelativeLayout>

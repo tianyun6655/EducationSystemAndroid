@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="35dp"
+    android:layout_height="match_parent">
+   <TextView
+       android:id="@+id/column"
+       android:layout_height="200dp"
+       android:layout_width="match_parent"
+       android:background="@drawable/data_shape"
+       android:layout_alignParentBottom="true"
+       />
+   <TextView
+       android:id="@+id/tv_score"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:textColor="@color/colorPrimary"
+       android:textSize="12sp"
+       android:layout_centerHorizontal="true"
+       android:text="53.6"
+       android:layout_above="@id/column"
+       />
+</RelativeLayout>

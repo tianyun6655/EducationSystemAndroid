@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="300dp">
+ <RelativeLayout
+     android:layout_height="300dp"
+     android:layout_width="match_parent"
+     android:background="@color/colorPrimary"
+     >
+     <ImageView
+         android:id="@+id/cryface"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:background="@drawable/cryface"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="30dp"
+         />
+      <TextView
+          android:id="@+id/tv_error"
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:textColor="#fff"
+          android:text="啊哦，获取数据失败，请检查网络或者稍后再试"
+          android:textSize="25sp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_below="@id/cryface"
+          android:layout_marginTop="20dp"
+          />
+ </RelativeLayout>
+    <Button
+        android:id="@+id/btn_check"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:text="确认"
+        android:textColor="@color/colorPrimary"
+        android:background="#fff"
+        android:textSize="20sp"
+
+        />
+</LinearLayout>

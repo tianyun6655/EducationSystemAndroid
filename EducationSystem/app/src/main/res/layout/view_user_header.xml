@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="150dp">
+
+    <TextView
+        android:id="@+id/tv_last_name"
+        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:background="@drawable/round_background_white"
+        android:text="陈"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="陈天赟"
+        android:layout_toRightOf="@id/tv_last_name"
+        android:textColor="#fff"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="15902126200"
+        android:layout_alignLeft="@id/tv_name"
+        android:textColor="#fff"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp"
+        />
+
+</RelativeLayout>

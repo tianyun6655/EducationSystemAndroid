@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        >
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_height="80dp"
+            android:layout_width="80dp"
+            android:background="@drawable/round_background_white"
+            android:layout_centerInParent="true"
+            android:text="天赟"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            />
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/edit_white"
+             android:layout_toLeftOf="@id/student_name"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="15dp"
+             />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cancel2x"
+            android:layout_toRightOf="@id/student_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/list_information"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+</LinearLayout>
