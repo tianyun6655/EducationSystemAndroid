@@ -23,11 +23,11 @@
             </intent-filter>-->
         </activity>
         <activity android:name=".MenuActivity">
-                   <!--     <intent-filter>
+                        <intent-filter>
                             <action android:name="android.intent.action.MAIN" />
 
                             <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>-->
+                        </intent-filter>
         </activity>
         <activity android:name=".GradeActivity">
           <!--  <intent-filter>
@@ -45,11 +45,11 @@
         </activity>
 
         <activity android:name=".CreateStudentAcitivity">
-            <intent-filter>
+          <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
     </application>
 

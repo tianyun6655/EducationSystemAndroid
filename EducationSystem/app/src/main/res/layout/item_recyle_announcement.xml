@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="周末家长会"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/date"
+        android:layout_alignParentRight="true"
+        android:text="2016-07-01"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="下周日家长会，在教室1013，请家长准时到达...."
+        android:layout_below="@id/title"
+        android:layout_marginTop="14dp"
+        />
+</RelativeLayout>

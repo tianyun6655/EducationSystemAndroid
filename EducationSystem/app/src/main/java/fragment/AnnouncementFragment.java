@@ -6,12 +6,15 @@ package fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.*;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.tianyunchen.educationsystem.R;
+
+import adapter.AnnouncementRecyleAdapter;
 
 public class AnnouncementFragment extends Fragment {
     private RecyclerView recyclerViewAnnouncement;
@@ -27,7 +30,8 @@ public class AnnouncementFragment extends Fragment {
 
     private void initViews(View view){
         recyclerViewAnnouncement = (RecyclerView)view.findViewById(R.id.recycle_announcment);
-
+        recyclerViewAnnouncement.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerViewAnnouncement.setAdapter(new AnnouncementRecyleAdapter(getActivity()));
     }
 
 }
