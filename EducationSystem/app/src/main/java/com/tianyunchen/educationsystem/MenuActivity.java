@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import fragment.AnnouncementFragment;
 import fragment.ClassListFragment;
 
 /**
@@ -109,6 +110,8 @@ public class MenuActivity extends BaseActivity implements Animator.AnimatorListe
     public void onAnimationEnd(Animator animator) {
            if(animator==moveToAuncoument){
                tvAunncoument.setTextColor(getResources().getColor(R.color.colorPrimary));
+               getSupportFragmentManager().beginTransaction().replace(R.id.content,new AnnouncementFragment()).commit();
+
 
            }else  if(animator==moveToMessage){
                tvMessage.setTextColor(getResources().getColor(R.color.colorPrimary));

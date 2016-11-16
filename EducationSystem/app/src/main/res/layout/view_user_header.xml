@@ -4,12 +4,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/colorPrimary"
-    android:layout_height="150dp">
+    android:layout_height="120dp">
 
     <TextView
         android:id="@+id/tv_last_name"
-        android:layout_height="80dp"
-        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
         android:background="@drawable/round_background_white"
         android:text="陈"
         android:textSize="25sp"
@@ -25,7 +25,7 @@
         android:text="陈天赟"
         android:layout_toRightOf="@id/tv_last_name"
         android:textColor="#fff"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:textSize="20sp"
         />
@@ -36,7 +36,7 @@
         android:text="15902126200"
         android:layout_alignLeft="@id/tv_name"
         android:textColor="#fff"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
         android:textSize="20sp"
         />
