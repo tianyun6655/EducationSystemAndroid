@@ -82,6 +82,12 @@
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
             </intent-filter>
         </receiver>
+        <receiver android:name="receiver.AnnouncementReceiver">
+            <intent-filter>
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE"/>
+            </intent-filter>
+
+        </receiver>
 
         <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
         <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理-->

@@ -14,7 +14,7 @@
         android:padding="13dp"
         >
         <TextView
-            android:id="@+id/tv_last_name"
+            android:id="@+id/tv_first_name"
             android:layout_height="60dp"
             android:layout_width="60dp"
             android:background="@drawable/circle_background"
@@ -25,6 +25,7 @@
             android:layout_gravity="center"
             />
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="陈天赟"
@@ -33,17 +34,17 @@
             android:layout_marginTop="10dp"
             />
         <TextView
+            android:id="@+id/tv_school_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="上海市尚德实验学校"
             android:layout_gravity="center"
             android:textSize="13sp"
             android:layout_marginTop="10dp"
             />
         <TextView
+            android:id="@+id/tv_class"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3年2班"
             android:layout_gravity="center"
             android:textSize="13sp"
             android:layout_marginTop="10dp"

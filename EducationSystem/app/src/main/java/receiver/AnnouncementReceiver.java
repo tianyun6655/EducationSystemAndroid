@@ -1,6 +1,7 @@
 package receiver;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.tencent.android.tpush.XGPushBaseReceiver;
 import com.tencent.android.tpush.XGPushClickedResult;
@@ -36,6 +37,7 @@ public class AnnouncementReceiver extends XGPushBaseReceiver {
 
     @Override
     public void onTextMessage(Context context, XGPushTextMessage xgPushTextMessage) {
+        Log.d("PushMessage",xgPushTextMessage.getContent());
 
     }
 
