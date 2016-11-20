@@ -1,6 +1,7 @@
 package com.tianyunchen.educationsystem;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ import dao.ParentLoginDao;
 import dao.SignUpParentDao;
 import dao.TeacherLoginDao;
 import listen.DaoListener;
+import untils.SharedPreferenceUtils;
 
 public class MainActivity extends BaseActivity implements DaoListener{
     private Button btn_signUp;
@@ -86,6 +88,7 @@ public class MainActivity extends BaseActivity implements DaoListener{
               if(parentLoginDao.getParent()==null){
                   Toast.makeText(MainActivity.this,"对不起，手机号码或者密码不正确",Toast.LENGTH_LONG).show();
               }else{
+                  SharedPreferenceUtils.inputPid(this,parentLoginDao.getParent().getPid());
                   Intent intent = new Intent(this,StudentInformationActivity.class);
                   Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_LONG).show();
                   startActivity(intent);

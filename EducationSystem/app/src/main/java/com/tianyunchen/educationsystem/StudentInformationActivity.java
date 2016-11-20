@@ -2,6 +2,7 @@ package com.tianyunchen.educationsystem;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -24,7 +25,7 @@ public class StudentInformationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
         initViews();
-        initFragment();
+//        initFragment();
     }
 
     @Override
@@ -38,6 +39,12 @@ public class StudentInformationActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+      initFragment();
     }
 
 

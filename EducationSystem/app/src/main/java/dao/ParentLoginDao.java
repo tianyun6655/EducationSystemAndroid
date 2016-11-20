@@ -41,6 +41,7 @@ return actionName;
             parent.setMobile(parentJsont.getString("mobile"));
             parent.setName(parentJsont.getString("name"));
             parent.setAid(parentJsont.getInt("aid"));
+            parent.setPid(parentJsont.getInt("pid"));
             parent.setPassword(parentJsont.getString("password"));
         }else{
             parent = null;

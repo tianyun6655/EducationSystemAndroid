@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/title"
+        android:id="@+id/tv_title"
         android:text="周末家长会"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -17,7 +17,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:id="@+id/date"
+        android:id="@+id/tv_date"
         android:layout_alignParentRight="true"
         android:text="2016-07-01"
         android:textColor="@color/colorPrimary"
@@ -25,10 +25,12 @@
         android:textSize="18sp"
         />
     <TextView
+        android:id="@+id/tv_content"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="下周日家长会，在教室1013，请家长准时到达...."
         android:layout_below="@id/title"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="30dp"
+
         />
 </RelativeLayout>

@@ -30,7 +30,8 @@ public class AnnouncementFragment extends Fragment implements DaoListener{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
           View view = inflater.inflate(R.layout.fragment_announcement,container,false);
         getAnnouncementByClassDao = new GetAnnouncementByClassDao();
-        getAnnouncementByClassDao.setCid(1);
+        getAnnouncementByClassDao.setCid(3);
+        getAnnouncementByClassDao.setDaoListener(this);
           initViews(view);
           return view;
     }
@@ -39,13 +40,15 @@ public class AnnouncementFragment extends Fragment implements DaoListener{
         recyclerViewAnnouncement = (RecyclerView)view.findViewById(R.id.recycle_announcment);
         recyclerViewAnnouncement.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerViewAnnouncement.addItemDecoration(new RecycleVertialItemDiv(getActivity()));
-        recyclerViewAnnouncement.setAdapter(new AnnouncementRecyleAdapter(getActivity()));
     }
 
 
     @Override
     public void onDataLoaded(BaseDao dao) {
+          if(dao.equals(getAnnouncementByClassDao)){
+              recyclerViewAnnouncement.setAdapter(new AnnouncementRecyleAdapter(getActivity(),getAnnouncementByClassDao.getAnnouncements()));
 
+          }
     }
 
     @Override

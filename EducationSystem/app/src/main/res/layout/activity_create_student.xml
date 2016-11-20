@@ -20,23 +20,7 @@
             />
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/edt_name"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/round_background_grey"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="#cccccc"
-        android:textSize="15sp"
-        android:hint="请输入学生姓名"
-        android:paddingLeft="15dp"
-        android:textColorHint="#bdbdbd"
-        android:layout_marginTop="20dp"
-        android:layout_centerInParent="true"
-        />
+
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -93,9 +77,28 @@
         android:drawableRight="@drawable/downicon"
         android:paddingRight="15dp"
         />
+    <TextView
+        android:id="@+id/edt_name"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/round_background_grey"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#cccccc"
+        android:textSize="15sp"
+        android:hint="请输入学生姓名"
+        android:paddingLeft="15dp"
+        android:textColorHint="#bdbdbd"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        />
 
-    <EditText
-        android:id="@+id/edt_studentid"
+
+
+    <TextView
+        android:id="@+id/tv_studentid"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginLeft="15dp"
@@ -111,26 +114,10 @@
         android:layout_marginTop="10dp"
         android:layout_centerInParent="true"
         />
-    <EditText
-        android:id="@+id/edt_birthday"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/round_background_grey"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="#cccccc"
-        android:textSize="15sp"
-        android:hint="请输入学生生日"
-        android:paddingLeft="15dp"
-        android:textColorHint="#bdbdbd"
-        android:layout_marginTop="10dp"
-        android:layout_centerInParent="true"
-        android:inputType="date"
-        />
+
 
     <Button
+        android:id="@+id/btn_band"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_gravity="center"

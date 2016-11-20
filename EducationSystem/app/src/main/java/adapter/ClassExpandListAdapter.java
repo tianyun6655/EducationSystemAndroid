@@ -15,6 +15,11 @@ import android.widget.TextView;
 
 import com.tianyunchen.educationsystem.R;
 
+import java.util.ArrayList;
+
+import bean.Parent;
+import bean.Teacher;
+
 /**
  * Created by tianyun chen on 2016/10/20.
  */
@@ -23,9 +28,13 @@ public class ClassExpandListAdapter implements ExpandableListAdapter {
     private String[][] secondlist = new String[][]{ {"张小帅（数学）","陈中帅（语文）"},
                                         {"吴帅帅","李赛高"},
                                        };
+    private ArrayList<Parent> parents;
+    private ArrayList<Teacher> teachers;
     private Context context;
 
-   public    ClassExpandListAdapter(Context context){
+   public    ClassExpandListAdapter(Context context,ArrayList<Teacher> teachers,ArrayList<Parent> parents){
+       this.teachers  = teachers;
+       this.parents = parents;
         this.context =context;
     }
     @Override
@@ -45,7 +54,12 @@ public class ClassExpandListAdapter implements ExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int i) {
-        return secondlist[i].length;
+        if(i==0){
+            return teachers.size();
+        }else {
+            return parents.size();
+        }
+        //return secondlist[i].length;
     }
 
     @Override
@@ -54,8 +68,14 @@ public class ClassExpandListAdapter implements ExpandableListAdapter {
     }
 
     @Override
-    public Object getChild(int i, int i1) {
-        return secondlist[i][i1];
+    public Object getChild(int i, int i1)
+    {
+        if(i==0){
+            return teachers.get(i1);
+        }else if(i==1){
+            return parents.get(i1);
+        }
+        return 01;
     }
 
     @Override
@@ -95,8 +115,15 @@ public class ClassExpandListAdapter implements ExpandableListAdapter {
         View view1 = LayoutInflater.from(context).inflate(R.layout.item_child,viewGroup,false);
         TextView textView = (TextView)view1.findViewById(R.id.tv_child);
         TextView lastName = (TextView)view1.findViewById(R.id.tv_last_name);
-        lastName.setText(secondlist[i][i1].substring(0,1));
-        textView.setText(secondlist[i][i1]);
+        if(i==0){
+            lastName.setText(teachers.get(i1).getName().substring(0,1));
+            textView.setText(teachers.get(i1).getName());
+        }else if(i==1){
+            lastName.setText(parents.get(i1).getName().substring(0,1));
+            textView.setText(parents.get(i1).getName());
+        }
+       /* lastName.setText(secondlist[i][i1].substring(0,1));
+        textView.setText(secondlist[i][i1]);*/
         return view1;
     }
 

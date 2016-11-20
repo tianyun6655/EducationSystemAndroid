@@ -2,10 +2,14 @@ package dao;
 
 import android.util.Log;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+
+import bean.Announcement;
 
 /**
  * Created by tianyun chen on 2016/11/15.
@@ -13,6 +17,7 @@ import java.util.HashMap;
 public class GetAnnouncementByClassDao extends BaseDao {
     private  final  String actionName = "announcement/listbyclass";
     private final String TAG ="AnnouncenmentByClassDao";
+    private ArrayList<Announcement> announcements;
     @Override
     public String getAcionName() {
         return actionName;
@@ -30,7 +35,24 @@ public class GetAnnouncementByClassDao extends BaseDao {
     }
     @Override
     protected void dealWithJson(JSONObject jsonObject) throws JSONException {
-        Log.d(TAG,jsonObject.toString());
+           int resultCode  = jsonObject.getInt("code");
+         if(resultCode==1){
+             JSONArray datas = jsonObject.getJSONArray("data");
+             announcements = new ArrayList<Announcement>();
+             for(int i=0;i<datas.length();i++){
+                 JSONObject eachAnnouncement = datas.getJSONObject(i);
+                 Announcement announcement = new Announcement();
+                 announcement.setTitle(eachAnnouncement.getString("title"));
+                 announcement.setContent(eachAnnouncement.getString("content"));
+                 announcement.setDate(eachAnnouncement.getString("date"));
+                 announcements.add(announcement);
+             }
 
+         }
+    }
+
+
+    public ArrayList<Announcement> getAnnouncements() {
+        return announcements;
     }
 }

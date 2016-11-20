@@ -4,35 +4,27 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp">
-
-    <ImageView
-        android:id="@+id/usr_img"
-        android:layout_height="20dp"
-        android:layout_width="20dp"
-        android:background="@drawable/user2"
-
-        />
     <TextView
-        android:id="@+id/name_text"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="姓名："
-        android:textSize="20sp"
-        android:textColor="#757575"
-        android:layout_toRightOf="@id/usr_img"
-        android:layout_marginLeft="15dp"
-        android:layout_centerVertical="true"
-        />
-    <TextView
-        android:id="@+id/tv_content"
-        android:layout_toRightOf="@id/name_text"
+        android:id="@+id/tv_name"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="陈天赟"
         android:textSize="20sp"
         android:textColor="#BDBDBD"
+        android:layout_toRightOf="@id/usr_img"
+        android:layout_marginLeft="15dp"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-
         />
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="1"
+        android:textSize="20sp"
+        android:textColor="#BDBDBD"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+
 </RelativeLayout>

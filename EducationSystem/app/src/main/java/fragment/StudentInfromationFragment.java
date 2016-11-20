@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.*;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import adapter.StudentInformationAdapter;
 import dao.BaseDao;
 import dao.GetStudentByPidDao;
 import listen.DaoListener;
+import untils.SharedPreferenceUtils;
 
 public class StudentInfromationFragment extends Fragment implements StudentInformationAdapter.StudentCallBack, DaoListener {
     private RecyclerView recyclerView;
@@ -35,33 +37,36 @@ public class StudentInfromationFragment extends Fragment implements StudentInfor
     private void getOnlineData(){
         getStudentByPidDao = new GetStudentByPidDao();
         getStudentByPidDao.setDaoListener(this);
-        getStudentByPidDao.setPid(10);
+        getStudentByPidDao.setPid(SharedPreferenceUtils.getPid(getActivity()));
 
 
     }
     private  void initView(View v){
         recyclerView = (RecyclerView)v.findViewById(R.id.student_recycle);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
-       /* StudentInformationAdapter studentInformationAdapter = new StudentInformationAdapter(getActivity());
-        studentInformationAdapter.setCallBack(this);
-        recyclerView.setAdapter(studentInformationAdapter);
-        recyclerView.addItemDecoration(new MyItemDec());
-*/
+
     }
 
     @Override
-    public void callback() {
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content,new StudentDetailFragment()).commit();
+    public void callback(int stid) {
+        Log.d("StInformation",stid+"");
+        StudentDetailFragment studentDetailFragment = new StudentDetailFragment();
+         studentDetailFragment.setStid(stid);
+         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content,studentDetailFragment).commit();
+
     }
 
     @Override
     public void onDataLoaded(BaseDao dao) {
         if(dao.equals(getStudentByPidDao)){
+            if(getStudentByPidDao.getStudents()!=null){
             StudentInformationAdapter studentInformationAdapter = new StudentInformationAdapter(getActivity(),getStudentByPidDao.getStudents());
-
             studentInformationAdapter.setCallBack(this);
             recyclerView.setAdapter(studentInformationAdapter);
             recyclerView.addItemDecoration(new MyItemDec());
+            }else{
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content,new ErrorFragment()).commit();
+            }
         }
 
     }
